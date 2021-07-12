@@ -6,7 +6,7 @@ const fs = require('fs')
 const fileUpload = multer({ storage: diskstorage }).single('image')
 
 const diskstorage = multer.diskStorage({
-    destination: path.join(__dirname, '../../public/Assets/upload'),
+    destination: path.join(__dirname, '../../client/public/Assets/upload'),
     filename: (req, file, cb) => {
         cb(null, Date.now() +"-"+ file.originalname)
     }
@@ -33,7 +33,7 @@ router.post('/images/post', fileUpload, (req, res) => {
         const type = req.file.mimetype
         const name = "/Assets/upload/"+req.file.filename
         const destination = req.body.title
-        const data = fs.readFileSync(path.join(__dirname, '../../public/Assets/upload/' + req.file.filename))
+        const data = fs.readFileSync(path.join(__dirname, '../../client/public/Assets/upload/' + req.file.filename))
  
         conn.query('INSERT INTO image (type,name,data,destination) values(?,?,?,?)', [type, name, data,destination], (err, rows) => {
             if(err) return res.status(500).send(err);
