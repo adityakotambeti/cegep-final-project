@@ -1,8 +1,8 @@
 import React from 'react';
-import Menu from '../Menu'
+import Menu from './Menu'
 import './Contact.css'
-import Footer from '../Footer'
-import Header from '../Header';
+import Footer from './Footer'
+import Header from './Header';
 
 const Contact = ({sendRoute})=>{
     const sendHome = (status) => { // the callback. Use a better name
@@ -14,7 +14,7 @@ const Contact = ({sendRoute})=>{
     return(
         <div>
             <Menu sendHome={sendHome} />
-            <Header title={'Contact us'} imageLink={`/Assets/Common/contact.jpg`}/>
+            <Header title={'Contact us'} imageLink={`/Common/contact.jpg`}/>
             <div class="container mt-5">
                 <div class="row">
                     <div class="col-sm-12 col-md-6">

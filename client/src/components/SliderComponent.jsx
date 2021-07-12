@@ -20,8 +20,8 @@ const SliderComponent = ({ slides }) => {
 
     return (
         <section className='slider'>
-            <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide} />
-            <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide} />
+            <FaArrowAltCircleLeft color='blue' className='left-arrow' onClick={prevSlide} />
+            <FaArrowAltCircleRight color='blue' className='right-arrow' onClick={nextSlide} />
             {slides.map((slide, index) => {
                 return (
                     <div

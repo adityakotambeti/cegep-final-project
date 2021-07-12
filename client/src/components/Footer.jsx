@@ -15,7 +15,7 @@ export default function Footer() {
                     </div>
                     <ul class="list-inline">
                         <li class="list-inline-item"><a href="/">Home</a></li>
-                        <li class="list-inline-item" ><a href="/destinations">Destinations</a></li>
+                        <li class="list-inline-item" ><a href="/locations">Locations</a></li>
                         <li class="list-inline-item"><a href="/contact">Contact us</a></li>
                     </ul>
                     <p class="copyright">By : Aditya | Akhila | Archita © 2021</p>

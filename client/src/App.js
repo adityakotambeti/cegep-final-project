@@ -9,19 +9,22 @@ const StyledApp = styled.div`
   background-color: ${(props) => props.theme.backgroundColor};
   `;
 function App() {
-  const [themeValue,setThemeValue] = useState('true')
-  const sendDataToParent = (status) => { setThemeValue(status); }
+  const [themeValue, setThemeValue] = useState('true')
+  const sendDataToParent = (status) => { 
+    console.log(status)
+    setThemeValue(status); 
+  }
 
  
   return (
-    <>
+    <div>
       <ThemeProvider  theme={themeValue ? light : dark}>
         <StyledApp>
         <ToggleButton className="togglebtn" sendDataToParent={sendDataToParent} />
          <Routes />
         </StyledApp>
       </ThemeProvider>
-    </>
+    </div>
   );
 }
 

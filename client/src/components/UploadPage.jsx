@@ -1,9 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { DropzoneArea } from 'material-ui-dropzone';
-import { useDebounce } from 'use-debounce';
-import Menu from '../Menu'
-import Footer from '../Footer'
-import Header from '../Header';
+import Menu from './Menu'
+import Footer from './Footer'
+import Header from './Header';
 
 export default function UploadPage({sendRoute}) {
     const sendHome = (status) => { // the callback. Use a better name
@@ -16,7 +15,7 @@ export default function UploadPage({sendRoute}) {
         
         <div>
             <Menu sendHome={sendHome} />
-            <Header title={'Upload Photo'} imageLink={`/Assets/Spain/spain4.jpg`}/>
+            <Header title={'Upload Photo'} imageLink={`/Common/athens.webp`}/>
             <Upload />
 
             <Footer/>
@@ -43,7 +42,7 @@ function Upload() {
       alert('Image must be less than 1 MB');
       return
     }
-    if(!file.name.match(/\.(jpg|jpeg|png|gif)$/)) {
+    if(!file.name.match(/\.(jpg|jpeg|png|gif|webp)$/)) {
       alert('Select valid image');
       return
     }
@@ -63,7 +62,6 @@ function Upload() {
       console.error(err)
     })
 
-    document.getElementById('destination').value = null
     setFile(null)
     window.location.reload();
     alert("Thank you for upload image");

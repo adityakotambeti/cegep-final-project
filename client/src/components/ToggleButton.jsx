@@ -6,6 +6,7 @@ const CheckedIcon = () => <>🌜</>;
 const UncheckedIcon = () => <>🌞</>;
 
 const ToggleButton = ( props ) => {
+    
 
     const [toggle, setToggle] = useState(false);
 
@@ -29,7 +30,6 @@ const ToggleButton = ( props ) => {
             onChange(!toggle);
         }
     }
-
     const getIcon = (type) => {
         const { icons } = props;
         if ( ! icons ) {
