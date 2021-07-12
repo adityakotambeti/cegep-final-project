@@ -16,7 +16,7 @@ export default function UploadPage() {
 }
 
 function Upload() {
-
+  const _URL = window.URL || window.webkitURL;
   const [file, setFile] = useState(null)
   const [title, setTitle] = useState("");
 
@@ -34,7 +34,21 @@ function Upload() {
       alert('Please select a valid image with proper extension. Supported types: jpg|jpeg|png|gif|webp');
       return
     }
-
+    var img = new Image();
+    var objectUrl = _URL.createObjectURL(file);
+    img.onload = function () {
+      if(this.width <= 0 || this.width > 1920 || this.height <= 0 || this.height > 1080){
+        alert('Please select an image with max resolution 1920 x 1080.');
+        return;
+      }
+      else{
+        postData();
+      }
+      _URL.revokeObjectURL(objectUrl);
+    };
+    img.src = objectUrl;
+  }
+  const postData = () => {
     const formdata = new FormData()
     formdata.append('image', file)
     formdata.append('title', title)
