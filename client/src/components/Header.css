@@ -1,9 +1,1 @@
-.banner {
-  /* background-image: url("../../assests/img/contact.jpg"); */
-  background-position: center;
-  background-color: #000000a6;
-  height: 400px;
-  background-blend-mode: multiply;
-  background-size: cover;
-  text-align: center;
-}
+.banner{background-position:center;background-color:#000000a6;height:400px;background-blend-mode:multiply;background-size:cover;text-align:center}

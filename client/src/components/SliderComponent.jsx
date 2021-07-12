@@ -29,7 +29,7 @@ const SliderComponent = ({ slides }) => {
                         key={index}
                     >
                         {index === current && (
-                            <img src={slide.image} alt='main' className='image' />
+                            <img width="90%" src={slide.image} alt='main' className='image' />
                         )}
                     </div>
                 );

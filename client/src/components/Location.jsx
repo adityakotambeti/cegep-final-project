@@ -1,8 +1,11 @@
 import React from 'react';
+import ReactPlayer from "react-player";
+
 import BannerComponent from './Header';
 import FooterComponent from './Footer';
 import Menu from './Menu';
-import VideoComponent from './VideoComponent';
+
+import './Location.css'
 
 const map = new Map();
 map.set('halkidiki', {
@@ -46,16 +49,12 @@ map.set('samos', {
 
 
 export default function Location({ location, sendRoute }) {
-    const sendHome = (status) => { // the callback. Use a better name
-        console.log("home", status);
-        sendRoute(status);
-    };
     let x = location.pathname.split('/');
     let name = x[x.length - 1];
     let data = map.get(name) || map.get('halkidiki');
     return (
         <div>
-            <Menu sendHome={sendHome} />
+            <Menu />
             <BannerComponent title={data.title} imageLink={`/Common/${name}.webp`} />
             <br />
             <div className="container">
@@ -71,8 +70,19 @@ export default function Location({ location, sendRoute }) {
                 </div>
             </div>
             <br />
-            <VideoComponent videoUrl={data.video}/>
+            <VideoComponent videoUrl={data.video} />
             <FooterComponent />
+        </div>
+    )
+}
+
+
+const VideoComponent = ({ videoUrl, imageUrl }) => {
+    return (
+        <div className="videoC" style={{ backgroundImage: `url(${imageUrl})` }}>
+            <div className="videoContainer">
+                <ReactPlayer url={videoUrl} width="1000px" height="500px" />
+            </div>
         </div>
     )
 }
