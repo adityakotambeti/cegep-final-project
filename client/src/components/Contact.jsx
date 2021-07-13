@@ -13,7 +13,7 @@ const Contact = () => {
             <div class="container mt-5">
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
-                        <div className="card p-4">
+                        <div className="card p-4" style={{background: "aliceblue"}}>
                             <form>
                                 <div class="form-group">
                                     <label for="name">Name*</label>
