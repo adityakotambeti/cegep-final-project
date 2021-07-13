@@ -42,7 +42,7 @@ const Contact = () => {
                     </div>
                     <div class="col-sm-12 col-md-6">
                         <div class="card contact-map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.773947234403!2d-73.56822168444084!3d45.514628979101694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a4b508adcab%3A0x9439f187f763ea27!2sC%C3%A9gep%20du%20Vieux%20Montr%C3%A9al!5e0!3m2!1sen!2sca!4v1625110262374!5m2!1sen!2sca" width="100%" height="100%" allowfullscreen="" loading="lazy"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1396.885416553933!2d-73.6684523!3d45.5549354!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc9193343284e97%3A0x2942b0cf7a9220a4!2sCegepgim%20montreal%20campus!5e0!3m2!1sen!2sin!4v1626209602747!5m2!1sen!2sin" width="100%" height="100%" allowfullscreen="" loading="lazy"></iframe>
                         </div>
                     </div>
                 </div>
