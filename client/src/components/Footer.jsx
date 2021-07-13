@@ -11,12 +11,7 @@ export default function Footer() {
                         <a href="/"><i class="icon ion-social-snapchat"></i></a>
                         <a href="/"><i class="icon ion-social-twitter"></i></a>
                     </div>
-                    <ul class="list-inline">
-                        <li class="list-inline-item"><a href="/">Home</a></li>
-                        <li class="list-inline-item" ><a href="/locations">Locations</a></li>
-                        <li class="list-inline-item"><a href="/contact">Contact us</a></li>
-                    </ul>
-                    <p class="copyright">By : Aditya | Akhila | Archita © 2021</p>
+                    <p class="copyright"><a href="https://visitgreece.gr">Visit Greece</a></p>
                 </footer>
             </div>
         </div>
